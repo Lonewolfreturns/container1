@@ -71,4 +71,4 @@ app.post('/calculate', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Frontend service running on port ${PORT}`);
 });
-//K8s assignment
+//K8s assignment- CSCI 5409 Akash
