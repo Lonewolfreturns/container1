@@ -13,7 +13,7 @@ steps:
       [
         "build",
         "-t",
-        "us-central1-docker.pkg.dev/k8s-assignment-441200/container1:latest",
+        "us-central1-docker.pkg.dev/k8s-assignment-441200/container1/container1-image:latest",
         ".",
       ]
 
@@ -22,7 +22,7 @@ steps:
     args:
       [
         "push",
-        "us-central1-docker.pkg.dev/k8s-assignment-441200/container1:latest",
+        "us-central1-docker.pkg.dev/k8s-assignment-441200/container1/container1-image:latest",
       ]
 
 # Logging options
