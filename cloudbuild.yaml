@@ -1,4 +1,13 @@
 steps:
+  # Step 1: Authenticate Docker with Artifact Registry
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        gcloud auth configure-docker us-central1-docker.pkg.dev
+
+  # Step 2: Build the Docker image
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
@@ -7,6 +16,8 @@ steps:
         "us-central1-docker.pkg.dev/k8s-assignment-441200/container1:latest",
         ".",
       ]
+
+  # Step 3: Push the Docker image to Artifact Registry
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
@@ -14,5 +25,6 @@ steps:
         "us-central1-docker.pkg.dev/k8s-assignment-441200/container1:latest",
       ]
 
+# Logging options
 options:
   logging: CLOUD_LOGGING_ONLY
