@@ -14,5 +14,6 @@ steps:
         "us-central1-docker.pkg.dev/k8s-assignment-441200/container1:latest",
       ]
 
+
 options:
   logging: CLOUD_LOGGING_ONLY
